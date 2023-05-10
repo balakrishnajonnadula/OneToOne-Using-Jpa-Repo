@@ -53,4 +53,10 @@ public class OneToOneApplication {
 		Belongings belongings = bRepo.findById(id).get();
 		return belongings;
 	}
+
+	@GetMapping("/getall/cust")
+	public List<Customer> getCustoemrs() {
+		List<Customer> findAll = cusRepo.findAll();
+		return findAll;
+	}
 }
